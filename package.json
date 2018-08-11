@@ -1,0 +1,19 @@
+{
+  "name": "crossover",
+  "version": "1.0.0",
+  "description": "JavaScript Chief Software Architect - Online Hiring Tournament.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/igorjsantos/jscsa.git"
+  },
+  "author": "Igor J. Santos <igorjosesantos@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igorjsantos/jscsa/issues"
+  },
+  "homepage": "https://github.com/igorjsantos/jscsa#readme"
+}
