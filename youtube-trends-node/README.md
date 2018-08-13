@@ -21,23 +21,24 @@ Right now it's showing the latest trends only for the United States, but we woul
 * Refactor public/javascripts/youtube.player.js file to follow JS best practices
 
 PLEASE NOTE THAT ALL THE TASKS LISTED ABOVE ARE MANDATORY.
-We'll be evaluating your submission from the following perspectives:
+
+#### We'll be evaluating your submission from the following perspectives
 
 * Code quality and best practices
 * Implementation of new feature
 * Bug fixes
 * Unit Tests
 
-#### Pre-Requisites
+### Pre-Requisites
 
     Any IDE
     Node v8+
     NPM v5+
 
-#### How to deliver
+### How to deliver
 
-    This is how we are going to access and evaluate your submission, so please make sure to go through the following steps before submitting your answer.
+This is how we are going to access and evaluate your submission, so please make sure to go through the following steps before submitting your answer.
 
-    1) Make sure to run unit tests, check code coverage, ensure the application is compiling and all dependencies are included.
+1) Make sure to run unit tests, check code coverage, ensure the application is compiling and all dependencies are included.
 
-    2) Zip the project without node_modules folder and store it in a shared location where Crossover team can access and download the project for evaluation, and add link to shared file in the answer field of this question.
+2) Zip the project without node_modules folder and store it in a shared location where Crossover team can access and download the project for evaluation, and add link to shared file in the answer field of this question.
