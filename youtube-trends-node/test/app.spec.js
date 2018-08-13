@@ -25,4 +25,22 @@ describe('Server', function() {
         done();
       });
   });
+
+  it('should open /youtube/someVideoId', (done) => {
+    chai.request(server)
+      .get('/youtube/YId_6G-YLpQ')
+      .end(function(err, res){
+        res.should.have.status(200);
+        done();
+      });
+  });
+
+  it('should cause a 404 error', (done) => {
+    chai.request(server)
+      .get('/thisUrlDoesNotExist/')
+      .end(function(err, res){
+        res.should.have.status(404);
+        done();
+      });
+  });
 });
