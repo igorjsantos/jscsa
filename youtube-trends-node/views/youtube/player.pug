@@ -1,0 +1,10 @@
+extends ../index
+
+block player
+  div(id='youtube-player')
+    div(class='video-container', data-video=videoId)
+
+    div(class='controls')
+      a(class='btn btn-primary', href='/youtube') < Back to Trends
+
+  script(async, defer, src='/javascripts/youtube.player.js')
