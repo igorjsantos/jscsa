@@ -7,19 +7,22 @@ const axios = Axios.create({
 });
 
 export class YoutubeService {
-  getTrendingVideos(options) {
-    const defaults = {
-      part: 'snippet, contentDetails',
+
+  getDefaults() {
+    return {
+      part: 'snippet, statistics',
       chart: 'mostPopular',
       regionCode: 'US',
       maxResults: '24',
       key: config.youtubeApi.key
     };
+  }
 
-    const params = Object.assign({}, defaults, options);
+  getTrendingVideos(options) {
+    const params = Object.assign({}, this.getDefaults(), options);
 
     let result = [];
-    return axios.get('/', {params}).then(function(res){
+    return axios.get('/', { params }).then(function (res) {
       result = res.data.items;
 
       for (let i = 0; i < result.length; i++) {
@@ -27,7 +30,9 @@ export class YoutubeService {
           id: result[i].id,
           title: result[i].snippet.title,
           thumbnail: result[i].snippet.thumbnails.high.url,
-          publishedAt: moment(result[i].snippet.publishedAt).fromNow()
+          publishedAt: moment(result[i].snippet.publishedAt).fromNow(),
+          viewCount: result[i].statistics.viewCount,
+          likeCount: result[i].statistics.likeCount
         };
       }
 

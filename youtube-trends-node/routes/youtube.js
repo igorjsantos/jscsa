@@ -7,8 +7,7 @@ const service = new YoutubeService();
 
 /* GET home page. */
 router.get('/', async (req, res) => {
-  const { regionCode } = req.query;
-  const trends = await service.getTrendingVideos({regionCode});
+  const trends = await service.getTrendingVideos(req.query);
 
   res.render('youtube/index', {
     title: config.title,
@@ -16,7 +15,7 @@ router.get('/', async (req, res) => {
     filters: {
       country: {
         list: config.countryList,
-        selected: regionCode || 'US'
+        selected: req.query.regionCode || service.getDefaults().regionCode
       }
     }
   });
