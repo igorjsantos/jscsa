@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "youtube-trends-node/package.json"
+      ]
+    }
+  }
+}
